@@ -25,7 +25,7 @@ export const capitalize = (s: string) => {
  * @param max - Upper bound of the random number
  */
 export const randomNumber = (min: number, max: number) => {
-  if (typeof min !== 'number') return ''
-  if (typeof max !== 'number') return ''
+  if (typeof min !== 'number') return -1
+  if (typeof max !== 'number') return -1
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
