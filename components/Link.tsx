@@ -7,7 +7,7 @@ interface LinkProps extends NextLinkProps {
 
 /**
  * Returns a next/link component that passes the href to a child,
- * allowing it to work with the Material-UI Link component
+ * allowing it to work with links in other style libraries.
  */
 export const Link = ({
   child,
