@@ -13,29 +13,21 @@
     "test": "jest",
     "test-all": "npm lint && npm tsc && npm test"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run tsc"
-    }
-  },
-  "lint-staged": {
-    "*.@(ts|tsx)": [
-      "npm lint",
-      "npm format"
-    ]
-  },
   "dependencies": {
-    "@material-ui/core": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@headlessui/react": "^0.2.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "autoprefixer": "^10.2.4",
     "formik": "^2.2.6",
     "ky": "^0.23.0",
     "ky-universal": "^0.8.1",
     "next": "latest",
     "next-auth": "^3.2.0",
     "next-connect": "^0.9.1",
+    "postcss": "^8.2.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "tailwindcss": "^2.0.2",
+    "uuid": "^8.3.2",
     "yup": "^0.32.8"
   },
   "devDependencies": {
@@ -52,7 +44,6 @@
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^4.2.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.2.3",
     "jest-watch-typeahead": "^0.5.0",
