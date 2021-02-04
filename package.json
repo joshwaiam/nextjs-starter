@@ -10,6 +10,7 @@
     "tsc": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
+    "merge-template": "git fetch template && git merge template/main --allow-unrelated-histories",,
     "test": "jest",
     "test-all": "npm lint && npm tsc && npm test"
   },
