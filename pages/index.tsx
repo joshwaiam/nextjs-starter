@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useSession, signIn, signOut } from 'next-auth/client'
 
 export const Home = (): JSX.Element => (
   <>

@@ -32,6 +32,7 @@
     "ky": "^0.23.0",
     "ky-universal": "^0.8.1",
     "next": "latest",
+    "next-auth": "^3.2.0",
     "next-connect": "^0.9.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "@testing-library/react": "^10.0.1",
     "@types/jest": "^25.1.4",
+    "@types/next-auth": "^3.1.24",
     "@types/node": "^13.9.5",
     "@types/react": "^16.9.27",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
