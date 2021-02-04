@@ -22,6 +22,7 @@ module.exports = {
     },
   },
   variants: {
+    animation: ['responsive', 'motion-safe', 'motion-reduce'],
     extend: {},
   },
   plugins: [require('@tailwindcss/forms')],
