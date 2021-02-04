@@ -10,7 +10,7 @@
     "tsc": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
-    "merge-template": "git fetch template && git merge template/main --allow-unrelated-histories",,
+    "merge-template": "git fetch template && git merge template/main --allow-unrelated-histories",
     "test": "jest",
     "test-all": "npm lint && npm tsc && npm test"
   },
@@ -40,7 +40,6 @@
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
     "babel-jest": "^25.2.3",
-    "babel-plugin-transform-imports": "^2.0.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-react": "^7.19.0",
