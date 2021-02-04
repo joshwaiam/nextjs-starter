@@ -1,6 +1,6 @@
 {
-  "name": "with-typescript-eslint-jest",
-  "author": "@erikdstock",
+  "name": "nextjs-starter",
+  "author": "@joshwaiam",
   "license": "MIT",
   "version": "1.0.0",
   "scripts": {
@@ -11,12 +11,12 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
-    "test-all": "npm lint && npm type-check && npm test"
+    "test-all": "npm lint && npm tsc && npm test"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run type-check"
+      "pre-push": "npm run tsc"
     }
   },
   "lint-staged": {
