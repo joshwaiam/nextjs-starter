@@ -1,8 +1,9 @@
 import NextLink, { LinkProps as NextLinkProps } from 'next/link'
-import { cloneElement } from 'react'
+import { cloneElement, ReactElement } from 'react'
 
 interface LinkProps extends NextLinkProps {
-  child: JSX.Element
+  children: ReactElement | ReactElement[]
+  className?: string
 }
 
 /**
@@ -10,13 +11,17 @@ interface LinkProps extends NextLinkProps {
  * allowing it to work with links in other style libraries.
  */
 export const Link = ({
-  child,
+  children,
+  className,
   href,
   passHref = true,
   ...rest
 }: LinkProps): JSX.Element => (
   <NextLink href={href} passHref={passHref} {...rest}>
-    {cloneElement(child, { href: href.toString() })}
+    {cloneElement(children as ReactElement, {
+      href: href.toString(),
+      className,
+    })}
   </NextLink>
 )
 
