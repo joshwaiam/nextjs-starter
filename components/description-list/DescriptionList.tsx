@@ -1,18 +1,20 @@
 import { ReactNode } from 'react'
 
-export interface DescriptionListProps {
+export interface CommonDescriptionListProps {
   children: ReactNode | ReactNode[]
   className?: string
-  colorClasses?: string
+}
+
+export interface DescriptionListProps extends CommonDescriptionListProps {
+  divideColor?: string
 }
 
 /**
  * Primary component for creating a description list <dl> with Tailwind
  * 
- * @param {ReactNode | ReactNode[]}     props.children
  * @param {string}                      props.className       Overrides component className with your own.
- * @param {string}                      props.colorClasses    Color specific TailwindCSS classes to apply.
- *                                                            Default value: 'divide-gray-200'
+ * @param {string}                      props.divideColor     Default value: 'divide-gray-200'
+ *                                                            
  * 
  * @example
    <DescriptionList>
@@ -37,9 +39,9 @@ export interface DescriptionListProps {
 export const DescriptionList = ({
   children,
   className,
-  colorClasses = 'divide-gray-200',
+  divideColor = 'divide-gray-200',
 }: DescriptionListProps) => (
-  <dl className={className || `divide-y ${colorClasses}`}>{children}</dl>
+  <dl className={className || `divide-y ${divideColor}`}>{children}</dl>
 )
 
 export default DescriptionList

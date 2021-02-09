@@ -1,18 +1,28 @@
-import { DescriptionListProps } from './DescriptionList'
+import { CommonDescriptionListProps } from './DescriptionList'
 
-export type DescriptionListRowDetailsProps = DescriptionListProps
+export interface DescriptionListRowDetailsProps
+  extends CommonDescriptionListProps {
+  textColor?: string
+  textColorDark?: string
+  textSize?: string
+}
 
 /**
- * @param {string} colorClasses   Default value: 'text-gray-900 dark:text-gray-500'
+ * @param {string} textColor          Default: 'text-gray-900'
+ * @param {string} textColorDark      Default: 'dark:text-gray-500'
+ * @param {string} textSize           Default: 'text-sm'
  */
 export const DescriptionListRowDetails = ({
   children,
   className,
-  colorClasses = 'text-gray-900 dark:text-gray-500',
+  textColor = 'text-gray-900',
+  textColorDark = 'dark:text-gray-500',
+  textSize = 'text-sm',
 }: DescriptionListRowDetailsProps) => (
   <dd
     className={
-      className || `mt-1 flex text-sm sm:mt-0 sm:col-span-2 ${colorClasses}`
+      className ||
+      `mt-1 sm:mt-0 flex sm:col-span-2 ${textSize} ${textColor} ${textColorDark}`
     }
   >
     {children}
