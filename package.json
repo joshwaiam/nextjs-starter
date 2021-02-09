@@ -15,12 +15,12 @@
     "test-all": "npm lint && npm tsc && npm test"
   },
   "dependencies": {
-    "@headlessui/react": "^0.2.0",
+    "@headlessui/react": "^0.3.0",
     "@tailwindcss/forms": "^0.2.1",
     "autoprefixer": "^10.2.4",
     "formik": "^2.2.6",
-    "ky": "^0.23.0",
-    "ky-universal": "^0.8.1",
+    "ky": "^0.26.0",
+    "ky-universal": "^0.9.1",
     "next": "^10.0.6",
     "next-auth": "^3.3.0",
     "next-connect": "^0.9.1",
@@ -28,6 +28,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "tailwindcss": "^2.0.2",
+    "use-dark-mode": "^2.3.1",
     "uuid": "^8.3.2",
     "yup": "^0.32.8"
   },
