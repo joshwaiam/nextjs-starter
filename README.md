@@ -6,7 +6,7 @@ Bootstrap a developer-friendly NextJS app configured with:
 - Linting with [ESLint](https://eslint.org/)
 - Formatting with [Prettier](https://prettier.io/)
 - Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
-- [Material-UI](https://material-ui.com) with [Babel configuration optimizations](https://material-ui.com/guides/minimizing-bundle-size/)
+- Styling with [TailwindCSS](https://www.tailwindcss.com)
 - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) installed and configured
 - Forms and validation with [Formik](https://formik.org) and [Yup](https://github.com/jquense/yup)
 - API handlers and middleware with [next-connect](https://www.npmjs.com/package/next-connect)
