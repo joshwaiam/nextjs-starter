@@ -14,18 +14,24 @@ export interface LoaderProps {
     | 'ring'
     | 'ripple'
     | 'roller'
+    | 'custom'
+  heartOverride?: JSX.Element
 }
 
 /**
  * CSS only loading spinners courtesy of LOADING.IO
  *
- * @param {string} bgColorClasses     Default: 'bg-gray-800'
- * @param {boolean} fullscreen        Whether the loader fills the entire screen
- * @param variant                     Which loading element to show
+ * @param {string} bgColorClasses         Default: 'bg-gray-800'
+ * @param {boolean} fullscreen            Whether the loader fills the entire screen.
+ * @param variant                         Which loading element to show.
+ * @param {JSX.Element} heartOverride     When the variant of 'heart' is selected, applies the effect to
+ *                                        the provided JSX
+ *
  */
 export const Loader = ({
   bgColorClasses = 'bg-gray-800',
   fullscreen,
+  heartOverride,
   variant = 'default',
 }: LoaderProps) => {
   let loadingEl = null
@@ -88,9 +94,7 @@ export const Loader = ({
       break
     case 'heart':
       loadingEl = (
-        <div className={styles.ldsHeart}>
-          <div></div>
-        </div>
+        <div className={styles.ldsHeart}>{heartOverride || <div></div>}</div>
       )
       break
     case 'ring':
