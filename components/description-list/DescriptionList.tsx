@@ -13,9 +13,8 @@ export interface DescriptionListProps extends CommonDescriptionListProps {
  * Primary component for creating a description list <dl> with Tailwind
  * 
  * @param {string}                      props.className       Overrides component className with your own.
- * @param {string}                      props.divideColor     Default value: 'divide-gray-200'
- *                                                            
- * 
+ * @param {string}                      props.divideColor     Default: 'divide-gray-200'     
+ *                                                   
  * @example
    <DescriptionList>
      <DescriptionListRow>
