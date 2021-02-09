@@ -3,20 +3,29 @@ import { ReactNode } from 'react'
 export interface DescriptionListProps {
   children: ReactNode | ReactNode[]
   className?: string
+  colorClasses?: string
 }
 
 /**
- * Components for creating a DescriptionList with TailwindCSS and Tailwind-UI
- *
+ * Primary component for creating a description list <dl> with Tailwind
+ * 
+ * @param {ReactNode | ReactNode[]}     props.children
+ * @param {string}                      props.className       Overrides component className with your own.
+ * @param {string}                      props.colorClasses    Color specific TailwindCSS classes to apply.
+ *                                                            Default value: 'divide-gray-200'
+ * 
  * @example
    <DescriptionList>
      <DescriptionListRow>
       <DescriptionListRowTitle>
-        Email
+        User
       </DescriptionListRowTitle>
       <DescriptionListRowDetails>
         <DescriptionListRowDetail>
-          test@test123.com
+          John Doe
+        </DescriptionListRowDetail>
+        <DescriptionListRowDetail>
+          JohnDoe186
         </DescriptionListRowDetail>
         <DescriptionListRowAction>
           <button>Update</button>
@@ -24,17 +33,13 @@ export interface DescriptionListProps {
       </DescriptionListRowDetails>
     </DescriptionListRow>
   </DescriptionList>
- * 
- * @param {object} props
- * @param {ReactNode | ReactNode[]}     props.children
- * @param {string}                      props.className
  */
-
 export const DescriptionList = ({
   children,
   className,
+  colorClasses = 'divide-gray-200',
 }: DescriptionListProps) => (
-  <dl className={className || 'divide-y divide-gray-200'}>{children}</dl>
+  <dl className={className || `divide-y ${colorClasses}`}>{children}</dl>
 )
 
 export default DescriptionList
