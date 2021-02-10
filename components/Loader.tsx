@@ -1,8 +1,9 @@
-import { ReactNode } from 'react'
+import { ReactNode, Children, cloneElement, ReactElement } from 'react'
 import styles from './Loader.module.css'
 
 export interface LoaderProps {
   bgColorClasses?: string
+  children?: ReactNode | ReactNode[]
   fullscreen?: boolean
   variant?:
     | 'default'
@@ -15,28 +16,32 @@ export interface LoaderProps {
     | 'ripple'
     | 'roller'
     | 'custom'
-  heartOverride?: JSX.Element
 }
 
 /**
  * CSS only loading spinners courtesy of LOADING.IO
+ * Use 'custom' variant to render children with a heart beat effect
  *
- * @param {string} bgColorClasses         Default: 'bg-gray-800'
- * @param {boolean} fullscreen            Whether the loader fills the entire screen.
- * @param variant                         Which loading element to show.
- * @param {JSX.Element} heartOverride     When the variant of 'heart' is selected, applies the effect to
- *                                        the provided JSX
+ * @param {string} bgColorClasses                 Default: 'bg-gray-800'
+ * @param {ReactNode | ReactNode[]} children      Rendered only if variant is 'custom'
+ * @param {boolean} fullscreen                    Whether the loader fills the entire screen.
+ * @param variant                                 Which loading element to show.
+ * @param {JSX.Element} heartOverride             When the variant of 'heart' is selected, applies the effect to
+ *                                                the provided JSX
  *
  */
 export const Loader = ({
   bgColorClasses = 'bg-gray-800',
+  children,
   fullscreen,
-  heartOverride,
   variant = 'default',
 }: LoaderProps) => {
   let loadingEl = null
 
   switch (variant) {
+    case 'custom':
+      loadingEl = <div className={styles.custom}>{children}</div>
+      break
     case 'default':
       loadingEl = (
         <div className={styles.ldsDefault}>
@@ -94,7 +99,9 @@ export const Loader = ({
       break
     case 'heart':
       loadingEl = (
-        <div className={styles.ldsHeart}>{heartOverride || <div></div>}</div>
+        <div className={styles.ldsHeart}>
+          <div></div>
+        </div>
       )
       break
     case 'ring':
