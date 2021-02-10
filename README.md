@@ -14,5 +14,6 @@ Bootstrap a developer-friendly NextJS app configured with:
 
 ## Getting started
 
-1. Add a template git remote for merging template updates.
+1. Add a template git remote for merging template updates. This will allow you to run `npm run merge-template` in projects.
    `git remote add template https://github.com/joshwaiam/nextjs-starter.git`
+2. Create .env vars at [Vercel](https://vercel.com). See the [sample.env](./sample.env) file.
