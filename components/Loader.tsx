@@ -1,34 +1,33 @@
 import { ReactNode, Children, cloneElement, ReactElement } from 'react'
 import styles from './Loader.module.css'
 
+type LoaderVariant =
+  | 'default'
+  | 'dual-ring'
+  | 'ellipsis'
+  | 'facebook'
+  | 'grid'
+  | 'heart'
+  | 'ring'
+  | 'ripple'
+  | 'roller'
+  | 'custom'
+
 export interface LoaderProps {
   bgColorClasses?: string
   children?: ReactNode | ReactNode[]
   fullscreen?: boolean
-  variant?:
-    | 'default'
-    | 'dual-ring'
-    | 'ellipsis'
-    | 'facebook'
-    | 'grid'
-    | 'heart'
-    | 'ring'
-    | 'ripple'
-    | 'roller'
-    | 'custom'
+  variant?: LoaderVariant
 }
 
 /**
  * CSS only loading spinners courtesy of LOADING.IO
- * Use 'custom' variant to render children with a heart beat effect
+ * Use 'custom' variant to render children with a heartbeat effect
  *
- * @param {string} bgColorClasses                 Default: 'bg-gray-800'
- * @param {ReactNode | ReactNode[]} children      Rendered only if variant is 'custom'
- * @param {boolean} fullscreen                    Whether the loader fills the entire screen.
- * @param variant                                 Which loading element to show.
- * @param {JSX.Element} heartOverride             When the variant of 'heart' is selected, applies the effect to
- *                                                the provided JSX
- *
+ * @param {string}                    bgColorClasses      Default: 'bg-gray-800'
+ * @param {ReactNode | ReactNode[]}   children            Rendered only if variant is 'custom'
+ * @param {boolean}                   fullscreen          Whether the loader fills the entire screen.
+ * @param {LoaderVariant}             variant             Which loading element to show.
  */
 export const Loader = ({
   bgColorClasses = 'bg-gray-800',
