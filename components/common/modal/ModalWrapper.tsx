@@ -7,6 +7,13 @@ interface ModalWrapperProps {
   onClose(): void
 }
 
+/**
+ * Wraps components with a modal overlay effect.
+ *
+ * @param {ReactNode | ReactNode} children      Elements to apply modal effect to
+ * @param {boolean}               isOpen        Whether to show the modal
+ * @param {onClose}               onClose       Function to close the modal when clicked
+ */
 export const ModalWrapper = ({
   children,
   isOpen,
