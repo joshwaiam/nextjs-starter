@@ -1,9 +1,9 @@
-import CheckCircleIcon from './common/icon/CheckCircleIcon'
-import XCircleIcon from './common/icon/XCircleIcon'
 import { BaseResponse } from 'lib/types'
-import InformationIcon from './common/icon/InformationIcon'
-import WarningIcon from './common/icon/WarningIcon'
 import { FunctionComponent } from 'react'
+import CheckCircleIcon from '../icon/CheckCircleIcon'
+import InformationIcon from '../icon/InformationIcon'
+import WarningIcon from '../icon/WarningIcon'
+import XCircleIcon from '../icon/XCircleIcon'
 
 export interface AlertProps extends BaseResponse {
   closeAlert(): void
