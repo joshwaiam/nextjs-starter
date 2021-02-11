@@ -1,16 +1,13 @@
 import Alert from 'components/common/alert'
 import DarkModeToggler from 'components/common/dark-mode-toggler'
+import { DividerWrapper, DividerText } from 'components/common/divider'
 import Loader from 'components/common/loader'
-import { LoaderProps } from 'components/common/loader/Loader'
 import ModalWrapper from 'components/common/modal/ModalWrapper'
 import Head from 'next/head'
 import { useState } from 'react'
 
 export const Home = (): JSX.Element => {
   const [showModal, setShowModal] = useState(false)
-  const [loaderVariant, setLoaderVariant] = useState<LoaderProps['variant']>(
-    'default'
-  )
 
   return (
     <>
@@ -20,52 +17,15 @@ export const Home = (): JSX.Element => {
       <ModalWrapper isOpen={showModal} onClose={() => setShowModal(false)}>
         Some content
       </ModalWrapper>
+
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 divide-y">
         <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-300 py-5">
           Component Showcase
         </h1>
-        <div className="py-5">
-          <h2 className="text-xl text-gray-800 dark:text-gray-300 pb-3">
-            Dark Mode Toggler
-          </h2>
-          <DarkModeToggler />
-        </div>
-        <div className="py-5">
-          <h2 className="text-xl text-gray-800 dark:text-gray-300 pb-3">
-            Modal
-          </h2>
-          <button
-            className="bg-primary-700 p-2 rounded text-white"
-            onClick={() => setShowModal(true)}
-          >
-            Show Modal
-          </button>
-        </div>
-        <div className="py-5">
-          <h2 className="text-xl text-gray-800 dark:text-gray-300 pb-3">
-            Loader
-          </h2>
-          <select
-            className="mb-3"
-            onChange={(e) =>
-              setLoaderVariant(e.target.value as LoaderProps['variant'])
-            }
-          >
-            <option>default</option>
-            <option>dual-ring</option>
-            <option>ellipsis</option>
-            <option>facebook</option>
-            <option>grid</option>
-            <option>heart</option>
-            <option>ring</option>
-            <option>ripple</option>
-            <option>roller</option>
-            <option>custom</option>
-          </select>
-          <Loader variant={loaderVariant}>
-            <h3>Custom Loader!</h3>
-          </Loader>
-        </div>
+        {/**
+         * ALERTS
+         *
+         */}
         <div className="py-5">
           <h2 className="text-xl text-gray-800 dark:text-gray-300 pb-3">
             Alerts
@@ -102,6 +62,110 @@ export const Home = (): JSX.Element => {
               closeAlert={null}
             />
           </div>
+        </div>
+
+        {/**
+         * Dark Mode Toggler
+         *
+         */}
+        <div className="py-5">
+          <h2 className="text-xl text-gray-800 dark:text-gray-300 pb-3">
+            Dark Mode Toggler
+          </h2>
+          <DarkModeToggler />
+        </div>
+
+        {/**
+         * Dividers
+         *
+         */}
+        <div className="py-5">
+          <h2 className="text-xl text-gray-800 dark:text-gray-300 pb-3">
+            Dividers
+          </h2>
+          <div className="py-3">
+            <DividerWrapper />
+          </div>
+          <div className="py-3">
+            <DividerWrapper>
+              <DividerText>With Centered Label</DividerText>
+            </DividerWrapper>
+          </div>
+          <div className="py-3">
+            <DividerWrapper>
+              <DividerText align="left">With Left Label</DividerText>
+            </DividerWrapper>
+          </div>
+          <div className="py-3">
+            <DividerWrapper>
+              <DividerText variant="title">With Centered Title</DividerText>
+            </DividerWrapper>
+          </div>
+          <div className="py-3">
+            <DividerWrapper>
+              <DividerText align="left" variant="title">
+                With Left Title
+              </DividerText>
+            </DividerWrapper>
+          </div>
+        </div>
+
+        {/**
+         * Loader
+         *
+         */}
+        <div className="py-5">
+          <h2 className="text-xl text-gray-800 dark:text-gray-300 pb-3">
+            Loader
+          </h2>
+          <div className="py-3">
+            <Loader variant="default" />
+          </div>
+          <div className="py-3">
+            <Loader variant="dual-ring" />
+          </div>
+          <div className="py-3">
+            <Loader variant="ellipsis" />
+          </div>
+          <div className="py-3">
+            <Loader variant="facebook" />
+          </div>
+          <div className="py-3">
+            <Loader variant="grid" />
+          </div>
+          <div className="py-3">
+            <Loader variant="heart" />
+          </div>
+          <div className="py-3">
+            <Loader variant="ring" />
+          </div>
+          <div className="py-3">
+            <Loader variant="ripple" />
+          </div>
+          <div className="py-3">
+            <Loader variant="roller" />
+          </div>
+          <div className="py-3">
+            <Loader variant="custom">
+              <h1 className="text-5xl text-white">Custom Loader!</h1>
+            </Loader>
+          </div>
+        </div>
+
+        {/**
+         * Modal
+         *
+         */}
+        <div className="py-5">
+          <h2 className="text-xl text-gray-800 dark:text-gray-300 pb-3">
+            Modal
+          </h2>
+          <button
+            className="bg-primary-700 p-2 rounded text-white"
+            onClick={() => setShowModal(true)}
+          >
+            Show Modal
+          </button>
         </div>
       </div>
     </>
