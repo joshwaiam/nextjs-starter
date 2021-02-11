@@ -1,5 +1,5 @@
 import DarkModeToggler from 'components/common/dark-mode-toggler'
-import ModalWrapper from 'components/common/modals/ModalWrapper'
+import ModalWrapper from 'components/common/modal/ModalWrapper'
 import Head from 'next/head'
 import { useState } from 'react'
 
