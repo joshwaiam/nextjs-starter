@@ -18,12 +18,19 @@ export interface DarkModeTogglerProps {
  * Component that enables the toggling of light/dark modes.
  *
  * @param {ReactNode} darkIcon                    Replacement for the default dark icon
+ *                                                Default: <MoonIcon className="h-5 w-5" />
+ *
  * @param {ReactNode} lightIcon                   Replacement for the default light icon
+ *                                                Default: <SunIcon className="h-5 w-5" />
+ *
  * @param {object}    toggleClasses               Replacement for the classes for the states of the toggle button.
+ *
  * @param {string}    toggleClasses.default       Class applied to both toggle buttons.
  *                                                Default: '-ml-px relative inline-flex items-center px-2 py-2 border border-primary-700 text-sm font-medium focus:z-10 focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-primary-500'
+ *
  * @param {string}    toggleClasses.active        Class applied to an active toggle button.
  *                                                Default: 'bg-primary-700 text-gray-300'
+ *
  * @param {string}    toggleClasses.inactive      Class applied to an inactive toggle button.
  *                                                Default: 'bg-white dark:bg-gray-800 text-gray-500 hover:bg-primary-200'
  *
