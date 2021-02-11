@@ -44,6 +44,7 @@ export const DarkModeToggler = ({
   const darkMode = useDarkMode(true, {
     classNameDark: 'dark',
     classNameLight: 'light',
+    element: process.browser ? document?.documentElement : null,
   })
 
   return (
