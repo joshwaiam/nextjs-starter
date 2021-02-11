@@ -6,6 +6,8 @@ interface LinkProps extends NextLinkProps {
   className?: string
 }
 
+// TODO Ensure this is even needed without Material-UI
+
 /**
  * Returns a next/link component that passes the href to a child,
  * allowing it to work with links in other style libraries.
