@@ -1,3 +1,4 @@
+import 'lib/wdyr'
 import React from 'react'
 import Head from 'next/head'
 import { Provider as AuthProvider } from 'next-auth/client'
