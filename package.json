@@ -22,6 +22,7 @@
     "formik": "^2.2.6",
     "ky": "^0.23.0",
     "ky-universal": "^0.8.1",
+    "mongodb": "^3.6.4",
     "mongoose": "^5.11.15",
     "mongoose-autopopulate": "^0.12.3",
     "next": "latest",
