@@ -45,15 +45,12 @@ export const ModalWrapper = ({
           onClick={onClose}
         ></div>
         {/* <!-- This element is to trick the browser into centering the modal contents. --> */}
-        <span
-          className="hidden sm:inline-block sm:align-middle sm:h-screen"
-          aria-hidden="true"
-        >
+        <span className="inline-block align-middle h-screen" aria-hidden="true">
           &#8203;
         </span>
 
         <div
-          className={`${childWrapperClasses} inline-block align-bottom rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6`}
+          className={`${childWrapperClasses} inline-block rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 align-middle sm:max-w-sm sm:w-full sm:p-6`}
           role="dialog"
           aria-modal="true"
         >
