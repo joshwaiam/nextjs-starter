@@ -25,7 +25,33 @@ module.exports = {
   },
   variants: {
     animation: ['responsive', 'motion-safe', 'motion-reduce'],
+    backgroundColor: [
+      'responsive',
+      'dark',
+      'group-hover',
+      'focus-within',
+      'hover',
+      'focus',
+      'disabled',
+    ],
     extend: {},
+    opacity: [
+      'responsive',
+      'group-hover',
+      'focus-within',
+      'hover',
+      'focus',
+      'disabled',
+    ],
+    textColor: [
+      'responsive',
+      'dark',
+      'group-hover',
+      'focus-within',
+      'hover',
+      'focus',
+      'disabled',
+    ],
   },
   plugins: [require('@tailwindcss/forms')],
 }
