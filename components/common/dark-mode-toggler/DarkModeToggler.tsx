@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import useDarkMode from 'use-dark-mode'
-import MoonIcon from '../icon/MoonIcon'
-import SunIcon from '../icon/SunIcon'
+import MoonIcon from '../icons/MoonIcon'
+import SunIcon from '../icons/SunIcon'
 import ToggleButton from './DarkModeToggleButton'
 
 export interface DarkModeTogglerProps {
