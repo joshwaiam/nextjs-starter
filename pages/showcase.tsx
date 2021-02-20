@@ -1,6 +1,14 @@
 import Alert from 'components/common/alert'
 import DarkModeToggler from 'components/common/dark-mode-toggler'
 import { DividerWrapper, DividerText } from 'components/common/divider'
+import CheckCircleIcon from 'components/common/icon/CheckCircleIcon'
+import InformationIcon from 'components/common/icon/InformationIcon'
+import MenuIcon from 'components/common/icon/MenuIcon'
+import MoonIcon from 'components/common/icon/MoonIcon'
+import SunIcon from 'components/common/icon/SunIcon'
+import WarningIcon from 'components/common/icon/WarningIcon'
+import XCircleIcon from 'components/common/icon/XCircleIcon'
+import XIcon from 'components/common/icon/XIcon'
 import Loader from 'components/common/loader'
 import ModalWrapper from 'components/common/modal/ModalWrapper'
 import Head from 'next/head'
@@ -150,6 +158,25 @@ export const Home = (): JSX.Element => {
               <h1 className="text-5xl text-white">Custom Loader!</h1>
             </Loader>
           </div>
+        </div>
+
+        {/**
+         * Icons
+         *
+         */}
+        <div className="py-5">
+          <h2 className="text-xl text-gray-800 dark:text-gray-300 pb-3">
+            Icons
+          </h2>
+
+          <CheckCircleIcon className="inline-block mr-1 w-12 h-12 text-white" />
+          <InformationIcon className="inline-block mr-1 w-12 h-12 text-white" />
+          <MenuIcon className="inline-block mr-1 w-12 h-12 text-white" />
+          <MoonIcon className="inline-block mr-1 w-12 h-12 text-white" />
+          <SunIcon className="inline-block mr-1 w-12 h-12 text-white" />
+          <WarningIcon className="inline-block mr-1 w-12 h-12 text-white" />
+          <XCircleIcon className="inline-block mr-1 w-12 h-12 text-white" />
+          <XIcon className="inline-block mr-1 w-12 h-12 text-white" />
         </div>
 
         {/**
