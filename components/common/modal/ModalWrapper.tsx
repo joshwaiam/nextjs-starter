@@ -14,7 +14,7 @@ interface ModalWrapperProps {
  *
  * @param {ReactNode | ReactNode} children                Elements to apply modal effect to.
  * @param {string}                childWrapperClasses     Classes applied to the div wrapping children components.
- *                                                        Default: 'bg-white dark:bg-gray-700'
+ *                                                        Default: 'bg-white dark:bg-gray-700 text-gray-500 dark:text-white'
  * @param {boolean}               isOpen                  Whether to show the modal.
  * @param {string}                modalBackdropClasses    Classes applied to the darkened modal backdrop.
  *                                                        Default: 'bg-gray-900 opacity-80'
@@ -22,7 +22,7 @@ interface ModalWrapperProps {
  */
 export const ModalWrapper = ({
   children,
-  childWrapperClasses = 'bg-white dark:bg-gray-700',
+  childWrapperClasses = 'bg-white dark:bg-gray-700 text-gray-500 dark:text-white',
   isOpen,
   modalBackdropClasses = 'bg-gray-900 opacity-80',
   onClose,

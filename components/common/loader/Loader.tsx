@@ -24,7 +24,8 @@ export interface LoaderProps {
  * CSS only loading spinners courtesy of LOADING.IO
  * Use 'custom' variant to render children with a heartbeat effect
  *
- * @param {string}                    bgColorClasses      Default: 'bg-gray-800'
+ * @param {string}                    bgColorClasses      Container background colors
+ *                                                        Default: 'bg-gray-800'
  * @param {ReactNode | ReactNode[]}   children            Rendered only if variant is 'custom'
  * @param {boolean}                   fullscreen          Whether the loader fills the entire screen.
  * @param {LoaderVariant}             variant             Which loading element to show.
