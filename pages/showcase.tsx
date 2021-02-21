@@ -13,6 +13,10 @@ import Loader from 'components/common/loader'
 import ModalWrapper from 'components/common/modal/ModalWrapper'
 import Head from 'next/head'
 import { useState } from 'react'
+import { Form, Formik, Field } from 'formik'
+import TwoColumnCards from 'components/common/form-layouts/two-column-cards/TwoColumnCards'
+import FormSection from 'components/common/form-layouts/two-column-cards/FormSection'
+import InputField from 'components/common/form-fields/InputField'
 
 export const Home = (): JSX.Element => {
   const [showModal, setShowModal] = useState(false)
@@ -193,6 +197,48 @@ export const Home = (): JSX.Element => {
           >
             Show Modal
           </button>
+        </div>
+
+        {/**
+         * Two Column with Cards Form Layout
+         *
+         */}
+        <div className="py-5">
+          <h2 className="text-xl text-gray-800 dark:text-gray-300 pb-3">
+            Form Layout - Two Column with Cards
+          </h2>
+          <Formik
+            initialValues={{ name: '', email: '' }}
+            onSubmit={(values, actions) => {
+              // TODO
+            }}
+          >
+            {({ errors, touched }) => (
+              <TwoColumnCards>
+                <FormSection
+                  title="Basic Info"
+                  subtitle="Please ensure all information is accurate"
+                >
+                  <InputField
+                    type="text"
+                    required
+                    name="name"
+                    label="Name"
+                    containerClassName="col-span-6 sm:col-span-3"
+                    errors={touched.name && errors.name ? errors.name : null}
+                  />
+                  <InputField
+                    type="email"
+                    required
+                    name="email"
+                    label="E-Mail"
+                    containerClassName="col-span-6 sm:col-span-3"
+                    errors={touched.email && errors.email ? errors.email : null}
+                  />
+                </FormSection>
+              </TwoColumnCards>
+            )}
+          </Formik>
         </div>
       </div>
     </>
