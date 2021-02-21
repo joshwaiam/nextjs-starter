@@ -1,4 +1,4 @@
-import { DarkModeToggler } from './DarkModeToggler'
+import DarkModeToggler from './DarkModeToggler'
 
 export default DarkModeToggler
 export { DarkModeToggler }
